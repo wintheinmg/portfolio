@@ -480,13 +480,13 @@
     <!-- End of page footer -->
 
 	<!-- core  -->
-    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <script src="{{ asset('vendors/jquery/jquery-3.4.1.js') }}"></script>
+    <script src="{{ asset('vendors/bootstrap/bootstrap.bundle.js') }}"></script>
     <!-- bootstrap 3 affix -->
-	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+	<script src="{{ asset('vendors/bootstrap/bootstrap.affix.js') }}"></script>
 
     <!-- steller js -->
-    <script src="assets/js/steller.js"></script>
+    <script src="{{ asset('js/steller.js') }}"></script>
 
 </body>
 </html>
