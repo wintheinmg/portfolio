@@ -16,7 +16,7 @@
     <!-- Page navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="{{ asset('imgs/logo.svg') }}" alt=""></a>
+            <a class="navbar-brand" href="#" style="color:#ff7a57; font-weight:bold; font-size: 1.5rem">My Portfolio</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -58,11 +58,11 @@
         <div class="container">
             <div class="infos">
                 <h6 class="subtitle">hello,I'm</h6>
-                <h6 class="title">James Smith</h6>
-                <p>UI/UX Designer</p>
+                <h6 class="title" style="font-size:4rem">Win Thein Maung</h6>
+                <p class="typewriter">I'm Web Developer</p>
 
                 <div class="buttons pt-3">
-                    <button class="btn btn-primary rounded">HIRE ME</button>
+                    {{-- <button class="btn btn-primary rounded">HIRE ME</button> --}}
                     <button class="btn btn-dark rounded">DOWNLOAD CV</button>
                 </div>
 

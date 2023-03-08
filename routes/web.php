@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,10 +14,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
+
+Route::post('register/user', [RegisterController::class, 'create'])->name('register.user');
 
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/components', function () {
-    return view('components');
+
+
+Route::group(['prefix' => 'admin', 'as' => 'admin', 'middleware' => 'auth'], function(){
+    Route::get('/', [HomeController::class, 'index'])->name('home');
 });
+
+

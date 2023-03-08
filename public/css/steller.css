@@ -11519,11 +11519,12 @@ pre {
 
 .header .container .img-holder img {
   width: 100%;
-  max-width: 620px;
+  max-width: 500px;
   -webkit-filter: drop-shadow(0 -4px 20px rgba(206, 212, 218, 0.4));
           filter: drop-shadow(0 -4px 20px rgba(206, 212, 218, 0.4));
   margin-left: auto;
   margin-right: -2rem;
+  padding-bottom: 100px;
 }
 
 @media (max-width: 991.98px) {
@@ -11647,3 +11648,26 @@ pre {
 
 /* custom */
 
+.typewriter {
+	width: 12ch;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 4px solid #212121;
+	animation: cursor 1s step-start infinite,
+    text 5s steps(18) alternate infinite;
+}
+
+@keyframes cursor {
+	0%, 100% {
+    border-color: #212121;
+  }
+}
+
+@keyframes text {
+	0% {
+    width: 0;
+  }
+	100% {
+    width: 18ch;
+  }
+}
