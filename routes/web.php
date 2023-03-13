@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 
 /*
@@ -17,6 +19,7 @@ use App\Http\Controllers\Auth\RegisterController;
 Auth::routes();
 
 Route::post('register/user', [RegisterController::class, 'create'])->name('register.user');
+Route::post('login', [LoginController::class, 'checkUser'])->name('login');
 
 Route::get('/', function () {
     return view('index');
@@ -24,6 +27,7 @@ Route::get('/', function () {
 
 
 Route::group(['prefix' => 'admin', 'as' => 'admin', 'middleware' => 'auth'], function(){
+    Route::get('/logout/user', [LogoutController::class, 'logout'])->name('logout.user');
     Route::get('/', [HomeController::class, 'index'])->name('home');
 });
 
