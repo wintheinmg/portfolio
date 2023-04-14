@@ -10,13 +10,15 @@
     <link rel="stylesheet" href="{{ asset('vendors/themify-icons/css/themify-icons.css') }}">
     <!-- Bootstrap + Steller main styles -->
 	<link rel="stylesheet" href="{{ asset('css/steller.css') }}">
+
+
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
     <!-- Page navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
         <div class="container">
-            <a class="navbar-brand" href="#" style="color:#ff7a57; font-weight:bold; font-size: 1.5rem">My Portfolio</a>
+            <a class="navbar-brand" href="#" style="color:#0345fc; font-weight:bold; font-size: 1.5rem">Win Thein Maung</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -58,19 +60,22 @@
         <div class="container">
             <div class="infos">
                 <h6 class="subtitle">hello,I'm</h6>
-                <h6 class="title" style="font-size:4rem">Win Thein Maung</h6>
-                <p class="typewriter">I'm Web Developer</p>
+                <h6 class="title" style="font-size:4rem">{{ $about->name }}</h6>
+                <p class="typewriter">I'm {{ $about->title }}</p>
 
                 <div class="buttons pt-3">
                     {{-- <button class="btn btn-primary rounded">HIRE ME</button> --}}
-                    <button class="btn btn-dark rounded">DOWNLOAD CV</button>
+                    @php
+                        $resume = '/files/' . $about->file;
+                        $profile = '/photos/' . $about->image;
+                    @endphp
+                    <a class="btn btn-dark rounded" href="{{ asset($resume) }}" download="">DOWNLOAD CV</a>
                 </div>
 
                 <div class="socials mt-4">
-                    <a class="social-item" href="javascript:void(0)"><i class="ti-facebook"></i></a>
-                    <a class="social-item" href="javascript:void(0)"><i class="ti-google"></i></a>
-                    <a class="social-item" href="javascript:void(0)"><i class="ti-github"></i></a>
-                    <a class="social-item" href="javascript:void(0)"><i class="ti-twitter"></i></a>
+                    <a class="social-item" href="https://www.linkedin.com/in/win-thein-maung-9b39ba213/" target="blink"><i class="ti-linkedin"></i></a>
+                    <a class="social-item" href="https://github.com/wintheinmg" target="blink"><i class="ti-github"></i></a>
+                    <a class="social-item" href="https://www.facebook.com/win.t.maung.5855" target="blink"><i class="ti-facebook"></i></a>
                 </div>
             </div>
             <div class="img-holder">
@@ -79,20 +84,16 @@
         </div>
 
         <!-- Header-widget -->
-        <div class="widget">
+        {{-- <div class="widget">
             <div class="widget-item">
-                <h2>124</h2>
+                <h2>12</h2>
                 <p>Happy Clients</p>
             </div>
             <div class="widget-item">
-                <h2>456</h2>
+                <h2>12</h2>
                 <p>Project Completed</p>
             </div>
-            <div class="widget-item">
-                <h2>789</h2>
-                <p>Awards Won</p>
-            </div>
-        </div>
+        </div> --}}
     </header>
     <!-- End of Page Header -->
 
@@ -101,14 +102,13 @@
         <div class="container mt-5">
             <div class="row text-center text-md-left">
                 <div class="col-md-3">
-                    <img src="{{ asset('imgs/avatar.jpg') }}" alt="" class="img-thumbnail mb-4">
+                    <img src="{{ asset($profile) }}" alt="" class="img-thumbnail mb-4">
                 </div>
                 <div class="pl-md-4 col-md-9">
-                    <h6 class="title">James Smith</h6>
-                    <p class="subtitle">UI/UX Designer</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, pariatur, aperiam aut autem voluptas odit. Odio ducimus delectus totam sed aliquam sequi praesentium mollitia, illum repudiandae quidem quod, magni magnam.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, eius, nam. Quo praesentium qui temporibus voluptatum, facilis aliquid eligendi fugiat beatae neque inventore non. Laborum repellendus consequatur ullam voluptatum asperiores.</p>
-                    <button class="btn btn-primary rounded mt-3">DOWNLOAD CV</button>
+                    <h6 class="title">{{ $about->name }}</h6>
+                    <p class="subtitle">{{ $about->title }}</p>
+                    <p>{{ $about->description }}</p>
+                    <a class="btn btn-primary rounded mt-3" href="{{ asset($resume) }}" download>DOWNLOAD CV</a>
                 </div>
             </div>
         </div>

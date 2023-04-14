@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('auth.layouts.app')
 
 @section('content')
 <main>
@@ -20,19 +20,19 @@
                   <form class="row g-3 needs-validation" action="{{ route('login') }}" method="POST" novalidate>
                     @csrf
                     <div class="col-12">
-                      <label for="yourUsername" class="form-label">Email</label>
+                      <label for="email" class="form-label">Email</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend"><i class="ri-mail-fill"></i></span>
-                        <input type="text" name="email" class="form-control" id="yourUsername" required>
+                        <input type="email" name="email" class="form-control" id="email" required>
                         <div class="invalid-feedback">Please enter your email.</div>
                       </div>
                     </div>
 
                     <div class="col-12">
-                      <label for="yourPassword" class="form-label">Password</label>
+                      <label for="password" class="form-label">Password</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="password" name="password" class="form-control" id="yourPassword" required>
+                        <input type="password" name="password" class="form-control" id="password" required>
                         <div class="invalid-feedback">Please enter your password!</div>
                       </div>
                     </div>
@@ -44,7 +44,7 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <button class="btn btn-primary w-100" type="submit">Login</button>
+                      <button class="btn btn-primary w-100" type="submit" onclick="lsRememberMe()">{{ trans('global.login') }}</button>
                     </div>
                     <div class="col-12">
                       <p class="small mb-0">Don't have account? <a href="{{ route('register') }}">Create an account</a></p>
@@ -63,4 +63,34 @@
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   </main><!-- End #main -->
+@endsection
+
+@section('scripts')
+<script>
+const rmCheck = document.getElementById("rememberMe"),
+    emailInput = document.getElementById("email"),
+    passwordInput = document.getElementById('password');
+
+if (localStorage.checkbox && localStorage.checkbox !== "") {
+  rmCheck.setAttribute("checked", "checked");
+  emailInput.value = localStorage.email;
+  passwordInput.value = localStorage.password;
+} else {
+  rmCheck.removeAttribute("checked");
+  emailInput.value = "";
+  passwordInput.value = "";
+}
+
+function lsRememberMe() {
+  if (rmCheck.checked && emailInput.value !== "") {
+    localStorage.email = emailInput.value;
+    localStorage.checkbox = rmCheck.value;
+    localStorage.password = passwordInput.value;
+  } else {
+    localStorage.email = "";
+    localStorage.password = "";
+    localStorage.checkbox = "";
+  }
+}
+</script>
 @endsection
