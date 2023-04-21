@@ -11,7 +11,7 @@
     <!-- Bootstrap + Steller main styles -->
 	<link rel="stylesheet" href="{{ asset('css/steller.css') }}">
 
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
@@ -79,7 +79,7 @@
                 </div>
             </div>
             <div class="img-holder">
-                <img src="{{ asset('imgs/man.svg') }}" alt="">
+                <img src="{{ asset('imgs/3D boy using laptop and phone Illustration.png') }}" alt="">
             </div>
         </div>
 
@@ -101,10 +101,12 @@
     <section id="about" class="section mt-3">
         <div class="container mt-5">
             <div class="row text-center text-md-left">
-                <div class="col-md-3">
-                    <img src="{{ asset($profile) }}" alt="" class="img-thumbnail mb-4">
+                <div class="col-md-3 profile-wrapper">
+                    <img src="{{ asset($profile) }}" alt="" class="">
+                    <span class="square first-square"></span>
+                    <span class="square second-square"></span>
                 </div>
-                <div class="pl-md-4 col-md-9">
+                <div class="col-md-8" style="padding-left: 100px">
                     <h6 class="title">{{ $about->name }}</h6>
                     <p class="subtitle">{{ $about->title }}</p>
                     <p>{{ $about->description }}</p>
@@ -114,81 +116,83 @@
         </div>
     </section>
 
-    <!-- Service section -->
-    <section id="service" class="section">
-        <div class="container text-center">
-            <h6 class="subtitle">Service</h6>
-            <h6 class="section-title mb-4">What I Do</h6>
-            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
-
-            <div class="row">
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-crown"></i>
-                            <h5>UI/UX Design</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-desktop"></i>
-                            <h5>Web Design</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-mobile"></i>
-                            <h5>App Design</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-bar-chart"></i>
-                            <h5>SEO</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End of Sectoin -->
-
     <!-- Skills section -->
     <section class="section">
         <div class="container text-center">
             <h6 class="subtitle">Skills</h6>
             <h6 class="section-title mb-4">Why Choose me</h6>
-            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
 
             <div class="row text-left">
-                <div class="col-sm-6">
-                    <h6 class="mb-3">Photoshop</h6>
+                <div class="col-sm-4">
+                    <h6 class="mb-3">HTML5</h6>
                     <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 89%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>89%</span></div>
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>85%</span></div>
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <h6 class="mb-3">Web Design</h6>
+                <div class="col-sm-4">
+                    <h6 class="mb-3">CSS3</h6>
                     <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 83%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>83%</span></div>
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>70%</span></div>
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <h6 class="mb-3">App Design</h6>
+                <div class="col-sm-4">
+                    <h6 class="mb-3">JavaScript</h6>
                     <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 95%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>95%</span></div>
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>80%</span></div>
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <h6 class="mb-3">SEO</h6>
+                <div class="col-sm-4">
+                    <h6 class="mb-3">PHP</h6>
                     <div class="progress">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h6 class="mb-3">Laravel</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h6 class="mb-3">React</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>70%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h6 class="mb-3">BootStrap</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h6 class="mb-3">JQuery</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h6 class="mb-3">MySQL</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>80%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h6 class="mb-3">Java</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 65%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>65%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h6 class="mb-3">Spring MVC</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 60%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>60%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h6 class="mb-3">GitHub</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>80%</span></div>
                     </div>
                 </div>
             </div>
@@ -200,78 +204,79 @@
     <section id="portfolio" class="section">
         <div class="container text-center">
             <h6 class="subtitle">Portfolio</h6>
-            <h6 class="section-title mb-4">Check My Wonderful Works</h6>
-            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
-
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="{{ asset('imgs/folio-1.jpg') }}" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Project Title</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+            <h6 class="section-title mb-4">Check My Projects</h6>
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row text-left">
+                            <div class="col-md-4">
+                                <div class="card border mb-4">
+                                    <img src="{{ asset('imgs/blog-1.jpg') }}" alt="" class="card-img-top w-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Designe for Everyone</h5>
+                                        <div class="post-details">
+                                            <a href="javascript:void(0)">Posted By: Admin</a>
+                                            <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
+                                            <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
+                                        <a href="javascript:void(0)">Read More..</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card border mb-4">
+                                    <img src="{{ asset('imgs/blog-2.jpg') }}" alt="" class="card-img-top w-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Web Layouts</h5>
+                                        <div class="post-details">
+                                            <a href="javascript:void(0)">Posted By: Admin</a>
+                                            <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
+                                            <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
+                                        <a href="javascript:void(0)">Read More..</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card border mb-4">
+                                    <img src="{{ asset('imgs/blog-3.jpg') }}" alt="" class="card-img-top w-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bootstrap Framework</h5>
+                                        <div class="post-details">
+                                            <a href="javascript:void(0)">Posted By: Admin</a>
+                                            <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
+                                            <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
+                                        <a href="javascript:void(0)">Read More..</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="img-wrapper">
-                        <img src="{{ asset('imgs/folio-2.jpg') }}" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Project Title</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
-                            </div>
-                        </div>
+                    <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="{{ asset('imgs/folio-3.jpg') }}" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Project Title</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="{{ asset('imgs/folio-4.jpg') }}" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Project Title</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="{{ asset('imgs/folio-5.jpg') }}" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Project Title</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="{{ asset('imgs/folio-6.jpg') }}" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Project Title</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-
         </div>
     </section>
     <!-- End of portfolio section -->
@@ -479,6 +484,9 @@
     </footer>
     <!-- End of page footer -->
 
+    <div id="preloader" style="">
+        <div id="loader"></div>
+    </div>
 	<!-- core  -->
     <script src="{{ asset('vendors/jquery/jquery-3.4.1.js') }}"></script>
     <script src="{{ asset('vendors/bootstrap/bootstrap.bundle.js') }}"></script>
@@ -488,5 +496,12 @@
     <!-- steller js -->
     <script src="{{ asset('js/steller.js') }}"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    window.setTimeout('fadeout();', 1000);
+    function fadeout(){
+        $('#preloader').hide();
+    }
+</script>
 </body>
 </html>
